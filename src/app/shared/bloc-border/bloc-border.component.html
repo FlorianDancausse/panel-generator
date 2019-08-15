@@ -1,0 +1,9 @@
+<h3 class="title">Border</h3>
+<form class="checkbox-container">
+  <input id="enable-border" type="checkbox" [(ngModel)]="isBorderEnable"/>
+  <label for="enable-border">Enable/Disable border</label>
+</form>
+<form>
+  <label>#</label>
+  <input class="text" type="text" (keyup)="changeBorderColor($event)">
+</form>

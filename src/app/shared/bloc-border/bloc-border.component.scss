@@ -1,0 +1,13 @@
+:host {
+    .title {
+        margin-bottom: 8px;
+    }
+
+    .checkbox-container {
+        display: flex;
+
+        input {
+            margin-right: 8px;
+        }
+    }
+}
