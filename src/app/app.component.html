@@ -5,15 +5,28 @@
     (heightEmitter)="onHeightEmitter($event)"
     [widthModel]="panelWitdh"
     [heightModel]="panelHeight"
-  ></app-bloc-size>
-  <!-- <app-bloc-border class="bloc border"></app-bloc-border> -->
+  >
+  </app-bloc-size>
+  <app-bloc-border
+    class="bloc border"
+    [isBorderModel]="isPanelBorder"
+    [borderColorModel]="panelBorderColor"
+    [borderStyleModel]="panelBorderStyle"
+    (isBorderEmitter)="onIsPanelBorder($event)"
+    (borderColorEmitter)="onBorderColorEmitter($event)"
+    (borderStyleEmitter)="onBorderStyleEmitter($event)"
+  >
+  </app-bloc-border>
 </div>
 
 <div
   class="panel"
   [ngStyle]="{
     'width.px': panelWitdh,
-    'height.px': panelHeight
+    'height.px': panelHeight,
+    'border-width.px': isPanelBorder ? panelBorderWidth : 0,
+    'border-color': '#' + panelBorderColor,
+    'border-style': panelBorderStyle
   }"
 >
 </div>

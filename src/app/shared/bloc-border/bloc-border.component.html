@@ -1,9 +1,19 @@
 <h3 class="title">Border</h3>
 <form class="checkbox-container">
-  <input id="enable-border" type="checkbox" [(ngModel)]="isBorderEnable"/>
-  <label for="enable-border">Enable/Disable border</label>
+  <input id="enable-border" name="check-enable-border" type="checkbox" [(ngModel)]="isBorderModel" (ngModelChange)="changeBorderActivation($event)"/>
+  <label for="enable-border">Enable panel's border</label>
 </form>
 <form>
-  <label>#</label>
-  <input class="text" type="text" (keyup)="changeBorderColor($event)">
+  <label for="border-color">#</label>
+  <input id="border-color" name="input-border-color" type="text" [(ngModel)]="borderColorModel" (ngModelChange)="changeBorderColor($event)">
+</form>
+<form>
+  <label for="border-style">#</label>
+  <select id="border-style" name="select-border-style" [(ngModel)]="borderStyleModel" (ngModelChange)="changeBorderStyle($event)">
+      <option value="solid">Solid</option>
+      <option value="dashed">Dashed</option>
+      <option value="dotted">Dotted</option>
+      <option value="double">Double</option>
+      <option value="groove">Groove</option>
+  </select>
 </form>

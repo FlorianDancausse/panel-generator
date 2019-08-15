@@ -15,19 +15,29 @@ export class AppComponent {
    */
   panelHeight: number;
   /**
-   * Used for enable/disable panel's
+   * Used to enable/disable panel's
    */
-  isBorderEnable: boolean;
+  isPanelBorder: boolean;
   /**
    * Color used for the panel's border
    */
   panelBorderColor: string;
+  /**
+   * Width used for the panel's border
+   */
+  panelBorderWidth: number;
+  /**
+   * Style used for the panel's border
+   */
+  panelBorderStyle: string;
 
   constructor() {
     this.panelWitdh = 320;
     this.panelHeight = 320;
-    this.isBorderEnable = true;
+    this.isPanelBorder = true;
+    this.panelBorderWidth = 1;
     this.panelBorderColor = 'd6a2ad';
+    this.panelBorderStyle = 'solid';
   }
 
   /**
@@ -46,5 +56,32 @@ export class AppComponent {
    */
   onHeightEmitter(height: number) {
     this.panelHeight = height;
+  }
+
+  /**
+   * Change the border to show or hide
+   *
+   * @param state true === show the border | false === hide the border
+   */
+  onIsPanelBorder(state: boolean) {
+    this.isPanelBorder = state;
+  }
+
+  /**
+   * Change the panel's border color
+   *
+   * @param color new border color for the panel
+   */
+  onBorderColorEmitter(color: string) {
+    this.panelBorderColor = color;
+  }
+
+  /**
+   * Change the panel's border style
+   *
+   * @param style new border style for the panel
+   */
+  onBorderStyleEmitter(style: string) {
+    this.panelBorderStyle = style;
   }
 }
