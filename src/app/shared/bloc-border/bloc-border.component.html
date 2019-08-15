@@ -4,6 +4,10 @@
   <label for="enable-border">Enable panel's border</label>
 </form>
 <form>
+    <label for="border-width">border width (px): </label>
+    <input id="border-width" name="input-border-width" type="text" [(ngModel)]="borderWidthModel" (ngModelChange)="changeBorderWidth($event)">
+  </form>
+<form>
   <label for="border-color">#</label>
   <input id="border-color" name="input-border-color" type="text" [(ngModel)]="borderColorModel" (ngModelChange)="changeBorderColor($event)">
 </form>

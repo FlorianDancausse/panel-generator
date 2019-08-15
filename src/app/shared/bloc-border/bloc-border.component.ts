@@ -11,6 +11,10 @@ export class BlocBorderComponent {
    */
   @Output() isBorderEmitter = new EventEmitter<boolean>();
   /**
+   * Width to emit
+   */
+  @Output() borderWidthEmitter = new EventEmitter<number>();
+  /**
    * Color to emit
    */
   @Output() borderColorEmitter = new EventEmitter<string>();
@@ -23,6 +27,10 @@ export class BlocBorderComponent {
    * Used for ngModel, to hide/show the border
    */
   @Input() isBorderModel: boolean;
+  /**
+   * Used for ngModel, to change the border width
+   */
+  @Input() borderWidthModel: number;
   /**
    * Used for ngModel, to change the border color
    */
@@ -45,6 +53,15 @@ export class BlocBorderComponent {
   }
 
   /**
+   * Emit the new border width
+   *
+   * @param newWidth Width for the border
+   */
+  public changeBorderWidth(newWidth: number) {
+    this.borderWidthEmitter.emit(newWidth);
+  }
+
+  /**
    * Emit the new border color
    *
    * @param newColor String from an input, this string does not contains the hexa's hashtag
@@ -61,7 +78,6 @@ export class BlocBorderComponent {
    * @param newStyle Style for the border
    */
   public changeBorderStyle(newStyle: string) {
-    console.log(newStyle);
     this.borderStyleEmitter.emit(newStyle);
   }
 

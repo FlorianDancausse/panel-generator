@@ -10,9 +10,11 @@
   <app-bloc-border
     class="bloc border"
     [isBorderModel]="isPanelBorder"
+    [borderWidthModel]="panelBorderWidth"
     [borderColorModel]="panelBorderColor"
     [borderStyleModel]="panelBorderStyle"
     (isBorderEmitter)="onIsPanelBorder($event)"
+    (borderWidthEmitter)="onBorderWidthEmitter($event)"
     (borderColorEmitter)="onBorderColorEmitter($event)"
     (borderStyleEmitter)="onBorderStyleEmitter($event)"
   >

@@ -19,13 +19,13 @@ export class AppComponent {
    */
   isPanelBorder: boolean;
   /**
-   * Color used for the panel's border
-   */
-  panelBorderColor: string;
-  /**
    * Width used for the panel's border
    */
   panelBorderWidth: number;
+  /**
+   * Color used for the panel's border
+   */
+  panelBorderColor: string;
   /**
    * Style used for the panel's border
    */
@@ -65,6 +65,16 @@ export class AppComponent {
    */
   onIsPanelBorder(state: boolean) {
     this.isPanelBorder = state;
+  }
+
+  /**
+   * Change the panel's border width
+   *
+   * @param width new border width for the panel
+   */
+  onBorderWidthEmitter(width: number) {
+    console.log(width);
+    this.panelBorderWidth = width;
   }
 
   /**
