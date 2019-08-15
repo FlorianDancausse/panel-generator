@@ -40,8 +40,7 @@ export class BlocBorderComponent {
    */
   @Input() borderStyleModel: string;
 
-  constructor() {
-  }
+  constructor() {}
 
   /**
    * Emit the new state of border color

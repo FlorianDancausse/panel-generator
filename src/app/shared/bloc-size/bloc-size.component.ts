@@ -24,8 +24,7 @@ export class BlocSizeComponent {
    */
   @Input() heightModel: number;
 
-  constructor() {
-  }
+  constructor() {}
 
   /**
    * Emit the new width on change
