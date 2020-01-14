@@ -1,9 +1,9 @@
 :host {
-  .title {
-    margin-bottom: 8px;
-  }
+  .size-form {
+    width: 100%;
 
-  input {
-    width: 100px;
+    > mat-form-field {
+      width: 100%;
+    }
   }
 }

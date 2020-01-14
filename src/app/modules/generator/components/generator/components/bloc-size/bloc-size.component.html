@@ -1,25 +1,32 @@
-<h3 class="title">Size</h3>
-<form>
-  <label for="input-width">Width (px): </label>
-  <input
-    id="input-width"
-    name="width"
-    type="number"
-    min="0"
-    placeholder="Width: "
-    [(ngModel)]="widthModel"
-    (ngModelChange)="onChangeWidth($event)"
-  />
-</form>
-<form>
-  <label for="input-height">Height (px): </label>
-  <input
-    id="input-height"
-    name="height"
-    type="number"
-    min="0"
-    placeholder="Height: "
-    [(ngModel)]="heightModel"
-    (ngModelChange)="onChangeHeight($event)"
-  />
-</form>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Edit panel size</mat-card-title>
+    <mat-card-subtitle>Values used are pixels</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="size-form">
+      <mat-form-field>
+        <input
+          matInput
+          name="width"
+          type="number"
+          min="0"
+          placeholder="Width: "
+          [(ngModel)]="widthModel"
+          (ngModelChange)="onChangeWidth($event)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          name="height"
+          type="number"
+          min="0"
+          placeholder="Height: "
+          [(ngModel)]="heightModel"
+          (ngModelChange)="onChangeHeight($event)"
+        />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

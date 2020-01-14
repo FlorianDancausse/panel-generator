@@ -1,3 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Panel Generator</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <div class="setup">
   <app-bloc-size class="bloc size" (widthEmitter)="onWidthEmitter($event)" (heightEmitter)="onHeightEmitter($event)">
   </app-bloc-size>
@@ -14,8 +20,6 @@
   >
   </app-bloc-border>
 </div>
-
-<div *ngIf="true"></div>
 
 <div
   class="panel"
