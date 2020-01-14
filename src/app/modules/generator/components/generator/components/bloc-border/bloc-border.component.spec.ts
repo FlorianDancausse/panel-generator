@@ -8,9 +8,8 @@ describe('BlocBorderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlocBorderComponent ]
-    })
-    .compileComponents();
+      declarations: [BlocBorderComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

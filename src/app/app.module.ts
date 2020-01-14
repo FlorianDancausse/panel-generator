@@ -11,12 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 /** components */
 import { AppComponent } from './app.component';
-import { BlocSizeComponent } from './shared/bloc-size/bloc-size.component';
-import { BlocBorderComponent } from './shared/bloc-border/bloc-border.component';
 /** components */
 
 @NgModule({
-  declarations: [AppComponent, BlocSizeComponent, BlocBorderComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
