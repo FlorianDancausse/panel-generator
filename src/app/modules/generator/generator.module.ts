@@ -1,6 +1,5 @@
 /** angular */
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 /** end angular */
 
 /** modules */
@@ -9,6 +8,6 @@ import { GeneratorComponentModule } from './generator-components.module';
 /** end modules */
 
 @NgModule({
-  imports: [CommonModule, GeneratorRoutingModule, GeneratorComponentModule]
+  imports: [GeneratorRoutingModule, GeneratorComponentModule]
 })
 export class GeneratorModule {}

@@ -1,5 +1,7 @@
 /** angular */
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 /** end angular */
 
 /** components */
@@ -11,6 +13,7 @@ import { BlocSizeComponent } from './components/generator/components/bloc-size/b
 const components = [GeneratorComponent, BlocBorderComponent, BlocSizeComponent];
 
 @NgModule({
+  imports: [CommonModule, FormsModule],
   declarations: components
 })
 export class GeneratorComponentModule {}

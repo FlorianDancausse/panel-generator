@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import {
+  panelWitdh,
+  panelHeight,
+  hasPanelBorder,
+  panelBorderSize,
+  panelBorderColor,
+  panelBorderStyle
+} from './constants/generator';
 
 @Component({
   selector: 'app-generator',
@@ -9,36 +17,27 @@ export class GeneratorComponent {
   /**
    * Panel's Width
    */
-  panelWitdh: number;
+  public panelWitdh = panelWitdh;
   /**
    * Panel's height
    */
-  panelHeight: number;
+  public panelHeight = panelHeight;
   /**
    * Used to enable/disable panel's
    */
-  isPanelBorder: boolean;
+  public isPanelBorder = hasPanelBorder;
   /**
    * Width used for the panel's border
    */
-  panelBorderWidth: number;
+  public panelBorderWidth = panelBorderSize;
   /**
    * Color used for the panel's border
    */
-  panelBorderColor: string;
+  public panelBorderColor = panelBorderColor;
   /**
    * Style used for the panel's border
    */
-  panelBorderStyle: string;
-
-  constructor() {
-    this.panelWitdh = 320;
-    this.panelHeight = 320;
-    this.isPanelBorder = true;
-    this.panelBorderWidth = 1;
-    this.panelBorderColor = 'd6a2ad';
-    this.panelBorderStyle = 'solid';
-  }
+  public panelBorderStyle = panelBorderStyle;
 
   /**
    * Change the panel's width
@@ -73,7 +72,6 @@ export class GeneratorComponent {
    * @param width new border width for the panel
    */
   onBorderWidthEmitter(width: number) {
-    console.log(width);
     this.panelBorderWidth = width;
   }
 
