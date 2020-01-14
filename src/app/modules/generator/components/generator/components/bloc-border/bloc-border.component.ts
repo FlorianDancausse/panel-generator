@@ -47,8 +47,9 @@ export class BlocBorderComponent {
    *
    * @param state true === show the border | false === hide the border
    */
-  public changeBorderActivation(state: boolean) {
-    this.isBorderEmitter.emit(state);
+  public changeBorderActivation(state: MouseEvent) {
+    this.isBorderModel = !this.isBorderModel;
+    this.isBorderEmitter.emit(this.isBorderModel);
   }
 
   /**

@@ -4,22 +4,24 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="setup">
-  <app-bloc-size class="bloc size" (widthEmitter)="onWidthEmitter($event)" (heightEmitter)="onHeightEmitter($event)">
-  </app-bloc-size>
-  <app-bloc-border
-    class="bloc border"
-    [isBorderModel]="isPanelBorder"
-    [borderWidthModel]="panelBorderWidth"
-    [borderColorModel]="panelBorderColor"
-    [borderStyleModel]="panelBorderStyle"
-    (isBorderEmitter)="onIsPanelBorder($event)"
-    (borderWidthEmitter)="onBorderWidthEmitter($event)"
-    (borderColorEmitter)="onBorderColorEmitter($event)"
-    (borderStyleEmitter)="onBorderStyleEmitter($event)"
-  >
-  </app-bloc-border>
-</div>
+<mat-card class="example-card">
+  <mat-card-content class="editing">
+    <app-bloc-size class="bloc size" (widthEmitter)="onWidthEmitter($event)" (heightEmitter)="onHeightEmitter($event)">
+    </app-bloc-size>
+    <app-bloc-border
+      class="bloc border"
+      [isBorderModel]="isPanelBorder"
+      [borderWidthModel]="panelBorderWidth"
+      [borderColorModel]="panelBorderColor"
+      [borderStyleModel]="panelBorderStyle"
+      (isBorderEmitter)="onIsPanelBorder($event)"
+      (borderWidthEmitter)="onBorderWidthEmitter($event)"
+      (borderColorEmitter)="onBorderColorEmitter($event)"
+      (borderStyleEmitter)="onBorderStyleEmitter($event)"
+    >
+    </app-bloc-border>
+  </mat-card-content>
+</mat-card>
 
 <div
   class="panel"

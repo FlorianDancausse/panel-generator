@@ -1,13 +1,14 @@
 :host {
-  .title {
-    margin-bottom: 8px;
-  }
+  > .border-card {
+    height: 100%;
+    box-sizing: border-box;
 
-  .checkbox-container {
-    display: flex;
+    .border-form {
+      width: 100%;
 
-    input {
-      margin-right: 8px;
+      > mat-form-field {
+        width: 100%;
+      }
     }
   }
 }

@@ -1,9 +1,14 @@
 :host {
-  .size-form {
-    width: 100%;
+  > .size-card {
+    height: 100%;
+    box-sizing: border-box;
 
-    > mat-form-field {
+    .size-form {
       width: 100%;
+
+      > mat-form-field {
+        width: 100%;
+      }
     }
   }
 }

@@ -1,49 +1,52 @@
-<h3 class="title">Border</h3>
-<form class="checkbox-container">
-  <input
-    id="enable-border"
-    name="check-enable-border"
-    type="checkbox"
-    [(ngModel)]="isBorderModel"
-    (ngModelChange)="changeBorderActivation($event)"
-  />
-  <label for="enable-border">Enable panel's border</label>
-</form>
-<form>
-  <label for="border-width">border width (px): </label>
-  <input
-    id="border-width"
-    name="input-border-width"
-    type="text"
-    [(ngModel)]="borderWidthModel"
-    (ngModelChange)="changeBorderWidth($event)"
-  />
-</form>
-<form>
-  <label for="border-color">#</label>
-  <input
-    id="border-color"
-    name="input-border-color"
-    type="text"
-    [(ngModel)]="borderColorModel"
-    (ngModelChange)="changeBorderColor($event)"
-  />
-</form>
-<form>
-  <label for="border-style">#</label>
-  <select
-    id="border-style"
-    name="select-border-style"
-    [(ngModel)]="borderStyleModel"
-    (ngModelChange)="changeBorderStyle($event)"
-  >
-    <option value="solid">Solid</option>
-    <option value="dashed">Dashed</option>
-    <option value="dotted">Dotted</option>
-    <option value="double">Double</option>
-    <option value="groove">Groove</option>
-    <option value="outset">Outset</option>
-    <option value="ridge">Ridge</option>
-    <option value="hidden">Hidden</option>
-  </select>
-</form>
+<mat-card class="border-card">
+  <mat-card-header>
+    <mat-card-title>Edit panel border</mat-card-title>
+    <mat-card-subtitle>
+      Size used are pixels,
+      <br />
+      Colors are hexadecimal
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-checkbox [checked]="isBorderModel" (click)="changeBorderActivation($event)">Enable border</mat-checkbox>
+    <form class="border-form">
+      <mat-form-field>
+        <input
+          matInput
+          name="input-border-width"
+          placeholder="Border width"
+          type="text"
+          [(ngModel)]="borderWidthModel"
+          (ngModelChange)="changeBorderWidth($event)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="border-color"
+          name="input-border-color"
+          type="text"
+          [(ngModel)]="borderColorModel"
+          (ngModelChange)="changeBorderColor($event)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          id="border-style"
+          name="select-border-style"
+          [(ngModel)]="borderStyleModel"
+          (ngModelChange)="changeBorderStyle($event)"
+        >
+          <mat-option value="solid">Solid</mat-option>
+          <mat-option value="dashed">Dashed</mat-option>
+          <mat-option value="dotted">Dotted</mat-option>
+          <mat-option value="double">Double</mat-option>
+          <mat-option value="groove">Groove</mat-option>
+          <mat-option value="outset">Outset</mat-option>
+          <mat-option value="ridge">Ridge</mat-option>
+          <mat-option value="hidden">Hidden</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
