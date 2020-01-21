@@ -12,7 +12,7 @@
           type="number"
           min="0"
           placeholder="Width: "
-          [(ngModel)]="widthModel"
+          [(ngModel)]="panel.width"
           (ngModelChange)="onChangeWidth($event)"
         />
       </mat-form-field>
@@ -23,7 +23,7 @@
           type="number"
           min="0"
           placeholder="Height: "
-          [(ngModel)]="heightModel"
+          [(ngModel)]="panel.height"
           (ngModelChange)="onChangeHeight($event)"
         />
       </mat-form-field>

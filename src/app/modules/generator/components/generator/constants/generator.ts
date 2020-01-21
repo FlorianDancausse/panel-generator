@@ -1,17 +1,12 @@
-/** Width default value of the panel */
-export const panelWitdh = 320;
+import { Panel } from '../classes/panel';
 
-/** Height default value of the panel */
-export const panelHeight = 320;
-
-/** Boolean to add/remove the panel border */
-export const hasPanelBorder = true;
-
-/** Default value of the panel border size */
-export const panelBorderSize = 1;
-
-/** Default color of the panel border */
-export const panelBorderColor = 'd6a2ad';
-
-/** Default value of the panel border style */
-export const panelBorderStyle = 'solid';
+export const defaultPanel: Panel = {
+  width: 320,
+  height: 320,
+  border: {
+    isActive: true,
+    color: 'd6a2ad',
+    style: 'solid',
+    width: 8
+  }
+};

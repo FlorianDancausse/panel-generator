@@ -1,4 +1,10 @@
+/** angular */
 import { Component, Output, EventEmitter, Input } from '@angular/core';
+/** end angular */
+
+/** classes */
+import { Panel } from '../../classes/panel';
+/** end classes */
 
 @Component({
   selector: 'app-bloc-size',
@@ -16,13 +22,9 @@ export class BlocSizeComponent {
   @Output() heightEmitter = new EventEmitter<number>();
 
   /**
-   * Width value use for ngModel
+   * The current panel
    */
-  @Input() widthModel: number;
-  /**
-   * Height value use for ngModel
-   */
-  @Input() heightModel: number;
+  @Input() panel: Panel;
 
   constructor() {}
 

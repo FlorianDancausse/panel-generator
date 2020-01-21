@@ -8,16 +8,17 @@
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <mat-checkbox [checked]="isBorderModel" (click)="changeBorderActivation($event)">Enable border</mat-checkbox>
+    <mat-checkbox [checked]="border.isActive" (change)="border.isActive = !border.isActive">Enable border</mat-checkbox>
     <form class="border-form">
       <mat-form-field>
         <input
           matInput
+          id="border-width"
           name="input-border-width"
           placeholder="Border width"
           type="text"
-          [(ngModel)]="borderWidthModel"
-          (ngModelChange)="changeBorderWidth($event)"
+          [value]="border.width"
+          [(ngModel)]="border.width"
         />
       </mat-form-field>
       <mat-form-field>
@@ -25,17 +26,19 @@
           matInput
           id="border-color"
           name="input-border-color"
+          placeholder="Border Color (in hexadecimal)"
           type="text"
-          [(ngModel)]="borderColorModel"
-          (ngModelChange)="changeBorderColor($event)"
+          [value]="border.color"
+          [(ngModel)]="border.color"
         />
       </mat-form-field>
       <mat-form-field>
         <mat-select
           id="border-style"
           name="select-border-style"
-          [(ngModel)]="borderStyleModel"
-          (ngModelChange)="changeBorderStyle($event)"
+          placeholder="Border style"
+          [value]="border.style"
+          [(ngModel)]="border.style"
         >
           <mat-option value="solid">Solid</mat-option>
           <mat-option value="dashed">Dashed</mat-option>

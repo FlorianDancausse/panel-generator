@@ -6,30 +6,18 @@
 
 <mat-card class="example-card">
   <mat-card-content class="editing">
-    <app-bloc-size class="bloc size" (widthEmitter)="onWidthEmitter($event)" (heightEmitter)="onHeightEmitter($event)">
-    </app-bloc-size>
-    <app-bloc-border
-      class="bloc border"
-      [isBorderModel]="isPanelBorder"
-      [borderWidthModel]="panelBorderWidth"
-      [borderColorModel]="panelBorderColor"
-      [borderStyleModel]="panelBorderStyle"
-      (isBorderEmitter)="onIsPanelBorder($event)"
-      (borderWidthEmitter)="onBorderWidthEmitter($event)"
-      (borderColorEmitter)="onBorderColorEmitter($event)"
-      (borderStyleEmitter)="onBorderStyleEmitter($event)"
-    >
-    </app-bloc-border>
+    <app-bloc-size class="bloc size" [panel]="panel"></app-bloc-size>
+    <app-bloc-border class="bloc border" [border]="panel.border"></app-bloc-border>
   </mat-card-content>
 </mat-card>
 
 <div
   class="panel"
   [ngStyle]="{
-    'width.px': panelWitdh,
-    'height.px': panelHeight,
-    'border-width.px': isPanelBorder ? panelBorderWidth : 0,
-    'border-color': '#' + panelBorderColor,
-    'border-style': panelBorderStyle
+    'width.px': panel.width,
+    'height.px': panel.height,
+    'border-width.px': panel.border.isActive ? panel.border.width : 0,
+    'border-color': '#' + panel.border.color,
+    'border-style': panel.border.style
   }"
 ></div>
