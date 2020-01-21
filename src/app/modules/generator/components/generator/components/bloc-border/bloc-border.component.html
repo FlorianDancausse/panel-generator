@@ -37,17 +37,12 @@
           id="border-style"
           name="select-border-style"
           placeholder="Border style"
-          [value]="border.style"
-          [(ngModel)]="border.style"
+          [value]="border.styleId"
+          [(ngModel)]="border.styleId"
         >
-          <mat-option value="solid">Solid</mat-option>
-          <mat-option value="dashed">Dashed</mat-option>
-          <mat-option value="dotted">Dotted</mat-option>
-          <mat-option value="double">Double</mat-option>
-          <mat-option value="groove">Groove</mat-option>
-          <mat-option value="outset">Outset</mat-option>
-          <mat-option value="ridge">Ridge</mat-option>
-          <mat-option value="hidden">Hidden</mat-option>
+          <mat-option *ngFor="let borderStyle of usableBorderStyles" value="borderStyle.id">{{
+            borderStyle.name
+          }}</mat-option>
         </mat-select>
       </mat-form-field>
     </form>

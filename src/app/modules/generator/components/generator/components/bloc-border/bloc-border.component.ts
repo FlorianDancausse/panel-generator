@@ -4,7 +4,12 @@ import { Component, Input } from '@angular/core';
 
 /** classes */
 import { PanelBorder } from '../../classes/panel-border';
+import { BorderStyle } from '../../classes/border-style';
 /** end classes */
+
+/** constants */
+import { defaultBorderStyles } from '../../constants/generator';
+/** end constants */
 
 @Component({
   selector: 'app-bloc-border',
@@ -23,6 +28,11 @@ export class BlocBorderComponent {
   public get border(): PanelBorder {
     return this._border;
   }
+
+  /**
+   * The usable border styles
+   */
+  public usableBorderStyles: BorderStyle[] = defaultBorderStyles;
 
   /**
    * Check if a string is hexadecimal
