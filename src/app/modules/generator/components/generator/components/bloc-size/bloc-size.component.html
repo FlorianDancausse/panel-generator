@@ -6,26 +6,10 @@
   <mat-card-content>
     <form class="size-form">
       <mat-form-field>
-        <input
-          matInput
-          name="width"
-          type="number"
-          min="0"
-          placeholder="Width: "
-          [(ngModel)]="panel.width"
-          (ngModelChange)="onChangeWidth($event)"
-        />
+        <input matInput name="width" type="number" min="0" placeholder="Width: " [(ngModel)]="panel.width" />
       </mat-form-field>
       <mat-form-field>
-        <input
-          matInput
-          name="height"
-          type="number"
-          min="0"
-          placeholder="Height: "
-          [(ngModel)]="panel.height"
-          (ngModelChange)="onChangeHeight($event)"
-        />
+        <input matInput name="height" type="number" min="0" placeholder="Height: " [(ngModel)]="panel.height" />
       </mat-form-field>
     </form>
   </mat-card-content>
