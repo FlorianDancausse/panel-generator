@@ -7,7 +7,7 @@ import { Panel } from './classes/panel';
 /** end classes */
 
 /** constants */
-import { defaultPanel } from './constants/generator';
+import { defaultPanel } from './constants/panel';
 /** end constants */
 
 @Component({

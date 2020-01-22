@@ -4,11 +4,11 @@ import { Component, Input } from '@angular/core';
 
 /** classes */
 import { PanelBorder } from '../../classes/panel-border';
-import { BorderStyle } from '../../classes/border-style';
+import { PanelBorderStyle } from '../../classes/panel-border-style';
 /** end classes */
 
 /** constants */
-import { defaultBorderStyles } from '../../constants/generator';
+import { defaultPanelBorderStyles } from '../../constants/panel-border-style';
 /** end constants */
 
 @Component({
@@ -32,7 +32,11 @@ export class BlocBorderComponent {
   /**
    * The usable border styles
    */
-  public usableBorderStyles: BorderStyle[] = defaultBorderStyles;
+  public usableBorderStyles: PanelBorderStyle[] = defaultPanelBorderStyles;
+
+  public onChangeBorderStyle(styleId: number) {
+    this.border.style = { ...this.usableBorderStyles.find(style => style.id === styleId) };
+  }
 
   /**
    * Check if a string is hexadecimal

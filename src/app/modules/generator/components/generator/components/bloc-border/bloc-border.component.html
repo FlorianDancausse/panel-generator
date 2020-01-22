@@ -13,7 +13,6 @@
       <mat-form-field>
         <input
           matInput
-          id="border-width"
           name="input-border-width"
           placeholder="Border width"
           type="text"
@@ -24,7 +23,6 @@
       <mat-form-field>
         <input
           matInput
-          id="border-color"
           name="input-border-color"
           placeholder="Border Color (in hexadecimal)"
           type="text"
@@ -34,13 +32,13 @@
       </mat-form-field>
       <mat-form-field>
         <mat-select
-          id="border-style"
           name="select-border-style"
           placeholder="Border style"
-          [value]="border.styleId"
-          [(ngModel)]="border.styleId"
+          [value]="border.style.id"
+          [(ngModel)]="border.style.id"
+          (ngModelChange)="onChangeBorderStyle($event)"
         >
-          <mat-option *ngFor="let borderStyle of usableBorderStyles" value="borderStyle.id">{{
+          <mat-option *ngFor="let borderStyle of usableBorderStyles" [value]="borderStyle.id">{{
             borderStyle.name
           }}</mat-option>
         </mat-select>

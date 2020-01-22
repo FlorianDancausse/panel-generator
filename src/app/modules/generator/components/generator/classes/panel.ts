@@ -1,6 +1,10 @@
+/** classes */
 import { PanelBorder } from './panel-border';
+/** end classes */
+
+/** interfaces */
 import { PanelInterface } from '../interfaces/panel-interface';
-import { defaultPanel } from '../constants/generator';
+/** end interfaces */
 
 export class Panel {
   public width: number;
@@ -8,8 +12,8 @@ export class Panel {
   public border: PanelBorder;
 
   constructor(data: PanelInterface) {
-    this.width = data.width || defaultPanel.width;
-    this.height = data.height || defaultPanel.height;
-    this.border = data.border || defaultPanel.border;
+    this.width = data.width;
+    this.height = data.height;
+    this.border = data.border;
   }
 }
