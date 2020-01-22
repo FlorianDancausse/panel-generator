@@ -2,9 +2,12 @@
 import { PanelBorderStyle } from './panel-border-style';
 /** end classes */
 
-/** interfaces */
-import { PanelBorderInterface } from '../interfaces/panel-border-interface';
-/** end interfaces */
+interface PanelBorderInterface {
+  isActive: boolean;
+  width: number;
+  color: string;
+  style: PanelBorderStyle;
+}
 
 export class PanelBorder {
   public isActive: boolean;

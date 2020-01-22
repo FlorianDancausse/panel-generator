@@ -2,9 +2,11 @@
 import { PanelBorder } from './panel-border';
 /** end classes */
 
-/** interfaces */
-import { PanelInterface } from '../interfaces/panel-interface';
-/** end interfaces */
+interface PanelInterface {
+  width: number;
+  height: number;
+  border: PanelBorder;
+}
 
 export class Panel {
   public width: number;

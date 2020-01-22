@@ -1,4 +1,7 @@
-import { PanelBorderStyleInterface } from '../interfaces/panel-border-style-interface';
+interface PanelBorderStyleInterface {
+  id: number;
+  name: string;
+}
 
 export class PanelBorderStyle {
   public id: number;
