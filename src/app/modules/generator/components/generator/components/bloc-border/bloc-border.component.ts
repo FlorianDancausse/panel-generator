@@ -8,7 +8,7 @@ import { PanelBorderStyle } from '../../classes/panel-border-style';
 /** end classes */
 
 /** constants */
-import { defaultPanelBorderStyles } from '../../constants/panel-border-style';
+import { defaultPanelBorderStyles } from '../../constants/panel';
 /** end constants */
 
 @Component({
