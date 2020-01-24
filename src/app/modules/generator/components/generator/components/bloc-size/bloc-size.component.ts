@@ -15,5 +15,12 @@ export class BlocSizeComponent {
   /**
    * The current panel
    */
-  @Input() panel: Panel;
+  private _panel: Panel;
+  @Input()
+  public set panel(panel: Panel) {
+    this._panel = panel;
+  }
+  public get panel(): Panel {
+    return this._panel;
+  }
 }

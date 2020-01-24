@@ -38,9 +38,9 @@
           [(ngModel)]="border.style.id"
           (ngModelChange)="onChangeBorderStyle($event)"
         >
-          <mat-option *ngFor="let borderStyle of usableBorderStyles" [value]="borderStyle.id">{{
-            borderStyle.name
-          }}</mat-option>
+          <mat-option *ngFor="let borderStyle of usableBorderStyles" [value]="borderStyle.id">
+            {{ borderStyle.name }}
+          </mat-option>
         </mat-select>
       </mat-form-field>
     </form>
