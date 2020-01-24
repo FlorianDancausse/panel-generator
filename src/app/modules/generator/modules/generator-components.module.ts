@@ -12,9 +12,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 /** end angular */
 
 /** components */
-import { GeneratorComponent } from './components/generator/generator.component';
-import { BlocBorderComponent } from './components/generator/components/bloc-border/bloc-border.component';
-import { BlocSizeComponent } from './components/generator/components/bloc-size/bloc-size.component';
+import { GeneratorComponent } from '../generator.component';
+import { BlocSizeComponent } from '../components/bloc-size/bloc-size.component';
+import { BlocBorderComponent } from '../components/bloc-border/bloc-border.component';
 /** components */
 
 const components = [GeneratorComponent, BlocBorderComponent, BlocSizeComponent];

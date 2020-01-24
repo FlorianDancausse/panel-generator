@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'generator',
-    loadChildren: () => import('./modules/generator/generator.module').then(module => module.GeneratorModule)
+    loadChildren: () => import('./modules/generator/modules/generator.module').then(module => module.GeneratorModule)
   }
 ];
 

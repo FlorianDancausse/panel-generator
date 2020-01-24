@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 /** end angular */
 
 /** component */
-import { GeneratorComponent } from './components/generator/generator.component';
+import { GeneratorComponent } from '../generator.component';
 /** end component */
 
 const routes: Routes = [
