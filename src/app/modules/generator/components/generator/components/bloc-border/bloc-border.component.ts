@@ -32,7 +32,7 @@ export class BlocBorderComponent {
   /**
    * The usable border styles
    */
-  public usableBorderStyles: PanelBorderStyle[] = { ...defaultPanelBorderStyles };
+  public usableBorderStyles: PanelBorderStyle[] = [...defaultPanelBorderStyles];
 
   public onChangeBorderStyle(styleId: number) {
     this.border.style = { ...this.usableBorderStyles.find(style => style.id === styleId) };
