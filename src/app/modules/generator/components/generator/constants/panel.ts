@@ -41,17 +41,3 @@ export const defaultPanelBorderStyles: PanelBorderStyle[] = [
     name: 'Hidden'
   })
 ];
-
-/**
- * The default panel
- */
-export const defaultPanel: Panel = new Panel({
-  width: 320,
-  height: 320,
-  border: new PanelBorder({
-    isActive: true,
-    width: 8,
-    color: 'd6a2ad',
-    style: new PanelBorderStyle({ ...defaultPanelBorderStyles[0] })
-  })
-});
