@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneratorComponent } from './generator.component';
+import { PanelBorderComponent } from './panel-border.component';
 
-describe('GeneratorComponent', () => {
-  let component: GeneratorComponent;
-  let fixture: ComponentFixture<GeneratorComponent>;
+describe('PanelBorderComponent', () => {
+  let component: PanelBorderComponent;
+  let fixture: ComponentFixture<PanelBorderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GeneratorComponent]
+      declarations: [PanelBorderComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeneratorComponent);
+    fixture = TestBed.createComponent(PanelBorderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

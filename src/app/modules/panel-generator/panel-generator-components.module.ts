@@ -12,12 +12,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 /** end angular */
 
 /** components */
-import { GeneratorComponent } from './components/panel-generator/generator.component';
-import { BlocSizeComponent } from './components/bloc-size/bloc-size.component';
-import { BlocBorderComponent } from './components/bloc-border/bloc-border.component';
+import { PanelGeneratorComponent } from './components/panel-generator/panel-generator.component';
+import { PanelSizeComponent } from './components/panel-generator/components/panel-size/panel-size.component';
+import { PanelBorderComponent } from './components/panel-generator/components/panel-border/panel-border.component';
 /** components */
 
-const components = [GeneratorComponent, BlocBorderComponent, BlocSizeComponent];
+const components = [PanelGeneratorComponent, PanelBorderComponent, PanelSizeComponent];
 
 @NgModule({
   imports: [
@@ -33,4 +33,4 @@ const components = [GeneratorComponent, BlocBorderComponent, BlocSizeComponent];
   ],
   declarations: components
 })
-export class GeneratorComponentModule {}
+export class PanelGeneratorComponentModule {}

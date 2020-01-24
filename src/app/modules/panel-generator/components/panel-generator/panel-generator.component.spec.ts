@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlocSizeComponent } from './bloc-size.component';
+import { PanelGeneratorComponent } from './panel-generator.component';
 
-describe('BlocSizeComponent', () => {
-  let component: BlocSizeComponent;
-  let fixture: ComponentFixture<BlocSizeComponent>;
+describe('PanelGeneratorComponent', () => {
+  let component: PanelGeneratorComponent;
+  let fixture: ComponentFixture<PanelGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BlocSizeComponent]
+      declarations: [PanelGeneratorComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlocSizeComponent);
+    fixture = TestBed.createComponent(PanelGeneratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

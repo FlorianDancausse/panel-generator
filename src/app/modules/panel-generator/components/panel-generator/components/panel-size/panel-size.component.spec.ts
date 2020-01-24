@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlocBorderComponent } from './bloc-border.component';
+import { PanelSizeComponent } from './panel-size.component';
 
-describe('BlocBorderComponent', () => {
-  let component: BlocBorderComponent;
-  let fixture: ComponentFixture<BlocBorderComponent>;
+describe('PanelSizeComponent', () => {
+  let component: PanelSizeComponent;
+  let fixture: ComponentFixture<PanelSizeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BlocBorderComponent]
+      declarations: [PanelSizeComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlocBorderComponent);
+    fixture = TestBed.createComponent(PanelSizeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,20 +3,20 @@ import { Component, Input } from '@angular/core';
 /** end angular */
 
 /** classes */
-import { PanelBorder } from '../../classes/panel-border';
-import { PanelBorderStyle } from '../../classes/panel-border-style';
+import { PanelBorder } from '../../../../classes/panel-border';
+import { PanelBorderStyle } from '../../../../classes/panel-border-style';
 /** end classes */
 
 /** constants */
-import { defaultPanelBorderStyles } from '../../constants/panel';
+import { defaultPanelBorderStyles } from '../../../../constants/panel';
 /** end constants */
 
 @Component({
-  selector: 'app-bloc-border',
-  templateUrl: './bloc-border.component.html',
-  styleUrls: ['./bloc-border.component.scss']
+  selector: 'app-panel-border',
+  templateUrl: './panel-border.component.html',
+  styleUrls: ['./panel-border.component.scss']
 })
-export class BlocBorderComponent {
+export class PanelBorderComponent {
   /**
    * Values of the border
    */

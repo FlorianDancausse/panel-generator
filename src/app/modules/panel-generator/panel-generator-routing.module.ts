@@ -4,13 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 /** end angular */
 
 /** component */
-import { GeneratorComponent } from '../generator.component';
+import { PanelGeneratorComponent } from './components/panel-generator/panel-generator.component';
 /** end component */
 
 const routes: Routes = [
   {
     path: '',
-    component: GeneratorComponent
+    component: PanelGeneratorComponent
   }
 ];
 

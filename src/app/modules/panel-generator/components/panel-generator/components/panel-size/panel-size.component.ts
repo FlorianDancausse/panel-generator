@@ -3,15 +3,15 @@ import { Component, Input } from '@angular/core';
 /** end angular */
 
 /** classes */
-import { Panel } from '../../classes/panel';
+import { Panel } from '../../../../classes/panel';
 /** end classes */
 
 @Component({
-  selector: 'app-bloc-size',
-  templateUrl: './bloc-size.component.html',
-  styleUrls: ['./bloc-size.component.scss']
+  selector: 'app-panel-size',
+  templateUrl: './panel-size.component.html',
+  styleUrls: ['./panel-size.component.scss']
 })
-export class BlocSizeComponent {
+export class PanelSizeComponent {
   /**
    * The current panel
    */
