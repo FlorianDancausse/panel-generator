@@ -1,36 +1,24 @@
 /** angular */
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatSelectModule } from '@angular/material/select';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CommonModule } from '@angular/common';
 /** end angular */
 
 /** components */
 import { PanelGeneratorComponent } from './components/panel-generator/panel-generator.component';
 import { PanelSizeComponent } from './components/panel-generator/components/panel-size/panel-size.component';
 import { PanelBorderComponent } from './components/panel-generator/components/panel-border/panel-border.component';
-/** components */
+/** end components */
+
+/** modules */
+import { AngularSharedModule } from 'src/app/shared/modules/angular-shared.module';
+import { AngularMaterialSharedModule } from 'src/app/shared/modules/angular-material-shared.module';
+/** end modules */
 
 const components = [PanelGeneratorComponent, PanelBorderComponent, PanelSizeComponent];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatGridListModule,
-    MatSelectModule,
-    MatCheckboxModule
-  ],
-  declarations: components
+  declarations: components,
+  imports: [AngularSharedModule, AngularSharedModule, AngularMaterialSharedModule]
 })
 export class PanelGeneratorComponentModule {}

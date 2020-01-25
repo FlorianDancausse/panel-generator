@@ -1,5 +1,6 @@
 /** angular */
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 /** end angular */
 
 /** modules */
